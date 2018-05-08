@@ -16,7 +16,15 @@ const commonConfig = merge([
   })
 ]);
 
-const productionConfig = merge([]);
+const productionConfig = merge([
+  {
+    optimization: {
+      splitChunks: {
+        chunks: "initial"
+      }
+    }
+  }
+]);
 
 const developmentConfig = merge([
   parts.devServer({
