@@ -18,9 +18,15 @@ const commonConfig = merge([
 
 const productionConfig = merge([
   {
+    output: {
+      filename: "[name].[contenthash].js"
+    },
     optimization: {
       splitChunks: {
         chunks: "all"
+      },
+      runtimeChunk: {
+        name: "manifest"
       }
     }
   }
