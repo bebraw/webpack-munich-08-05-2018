@@ -11,7 +11,9 @@ const commonConfig = merge([
       })
     ]
   },
-  parts.loadCSS()
+  parts.extractCSS({
+    use: "css-loader"
+  })
 ]);
 
 const productionConfig = merge([]);
