@@ -65,3 +65,15 @@ module.exports = input => input + input;
 **plugin.js**
 
 A class that implements `apply` method.
+
+### Loader Order
+
+```javascript
+use: ["style-loader", "css-loader"];
+```
+
+read as
+
+```javascript
+styleLoader(cssLoader(input));
+```
